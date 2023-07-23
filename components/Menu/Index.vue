@@ -1,5 +1,7 @@
 <template>
-  <div class="flex h-12 items-center justify-around bg-background text-text">
+  <div
+    class="flex h-[4%] w-screen items-center justify-around border-b-2 border-accent"
+  >
     <div><nuxt-link to="/">Graveyard Keeper</nuxt-link></div>
     <div class="flex w-64 justify-around">
       <div><nuxt-link to="/calculator">Calculator</nuxt-link></div>
