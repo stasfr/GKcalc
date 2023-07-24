@@ -8,9 +8,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "deploy": "gh-pages -d dist"
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -23,7 +21,6 @@
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
     "@pinia/nuxt": "^0.4.11",
-    "gh-pages": "^5.0.0",
     "pinia": "^2.1.3"
   }
 }
