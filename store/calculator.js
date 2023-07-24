@@ -2,7 +2,10 @@ import { defineStore } from 'pinia';
 
 const state = () => {
   return {
-    cards: [{ id: 1 }, { id: 2 }],
+    cards: [
+      { id: 0, count: 0 },
+      { id: 1, count: 0 }
+    ],
     recipes: []
   };
 };
@@ -19,16 +22,15 @@ const actions = {
       id = this.cards.at(-1).id + 1;
     }
 
-    this.cards.push({ id });
+    this.cards.push({ id, count: 0 });
   },
 
   deleteCard(id) {
-    this.cards.splice(
-      this.cards.findIndex(element => {
-        return element.id === id;
-      }),
-      1
-    );
+    const cardIndex = this.cards.findIndex(element => {
+      return element.id === id;
+    });
+
+    this.cards.splice(cardIndex, 1);
   }
 };
 

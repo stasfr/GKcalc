@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-4 mb-8 flex h-64 w-48 flex-col items-center justify-between rounded bg-primary"
+    class="mx-4 mb-8 flex h-64 w-48 flex-col items-center justify-between rounded bg-primary pb-1"
   >
     <div class="flex w-full flex-row-reverse rounded">
       <button @click="deleteCard" class="w-6 bg-secondary text-text">
@@ -8,46 +8,23 @@
       </button>
     </div>
     <input class="bg-primary text-center text-background" type="text" />
-    <button @click="count = 0">{{ count }}</button>
+    <div class="w-1/2 rounded bg-secondary text-center text-text">
+      {{ options.count }}
+    </div>
     <div class="flex justify-around">
-      <button
-        class="ml-1 w-6 rounded bg-secondary text-text"
-        @click="count -= 4"
-      >
-        -4
-      </button>
-      <button
-        class="ml-1 w-6 rounded bg-secondary text-text"
-        @click="count -= 2"
-      >
-        -2
-      </button>
-      <button
-        class="ml-1 w-6 rounded bg-secondary text-text"
-        @click="count -= 1"
-      >
-        -1
-      </button>
-      <button
-        class="ml-1 w-6 rounded bg-secondary text-text"
-        @click="count += 1"
-      >
-        +1
-      </button>
-      <button
-        class="ml-1 w-6 rounded bg-secondary text-text"
-        @click="count += 2"
-      >
-        +2
-      </button>
-      <button
-        class="ml-1 w-6 rounded bg-secondary text-text"
-        @click="count += 4"
-      >
-        +4
+      <CalculatorCalcCountBtn :id="options.id" :difference="-4" />
+      <CalculatorCalcCountBtn :id="options.id" :difference="-2" />
+      <CalculatorCalcCountBtn :id="options.id" :difference="-1" />
+      <CalculatorCalcCountBtn :id="options.id" :difference="+1" />
+      <CalculatorCalcCountBtn :id="options.id" :difference="+2" />
+      <CalculatorCalcCountBtn :id="options.id" :difference="+4" />
+    </div>
+    <div class="flex w-full justify-around">
+      <button class="rounded bg-secondary px-1 text-text">Change Type</button>
+      <button class="rounded bg-secondary px-1 text-text" @click="resetCounter">
+        Reset
       </button>
     </div>
-    <button class="w-28 rounded bg-secondary text-text">Change Type</button>
   </div>
 </template>
 
@@ -67,5 +44,7 @@ const deleteCard = () => {
   store.deleteCard(props.options.id);
 };
 
-const count = ref(0);
+const resetCounter = () => {
+  props.options.count = 0;
+};
 </script>
