@@ -22,7 +22,7 @@
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
     "@pinia/nuxt": "^0.4.11",
-    "@prisma/client": "^4.15.0",
+    "@prisma/client": "^5.0.0",
     "pinia": "^2.1.3"
   }
 }
