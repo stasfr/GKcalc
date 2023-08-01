@@ -1,0 +1,163 @@
+{
+  "place": [
+    { "name": "Двор" },
+    { "name": "Милый дом" },
+    { "name": "Морг" },
+    { "name": "Алхимическая лаборотория" },
+    { "name": "Садоводство" },
+    { "name": "Фермерство" },
+    { "name": "Виноградник" },
+    { "name": "Ведьмина гора" },
+    { "name": "Пчеловодство" },
+    { "name": "Подвал" },
+    { "name": "Церковь" },
+    { "name": "Кладбище" },
+    { "name": "Крематорий" },
+    { "name": "Хижина в лесу" },
+    { "name": "Карьер" },
+    { "name": "Зона жертвоприношения" },
+    { "name": "Мельница" },
+    { "name": "Препятствия" },
+    { "name": "Сад камней" },
+    { "name": "Лесопилка" },
+    { "name": "Торговый офис" }
+  ],
+  "points": [{ "name": "Красные" }, { "name": "Зеленые" }, { "name": "Синие" }],
+  "schemas": [
+    {
+      "place_id": 1,
+      "name": "Ящик",
+      "energy_cost": 7
+    },
+    {
+      "place_id": 1,
+      "name": "Склад камня",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Склад бревен",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Расширение двора",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Склад железной руды",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Камнетёсная мастерская",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Камнетёсная мастерская II",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Плавильная печь",
+      "energy_cost": 8
+    },
+    {
+      "place_id": 1,
+      "name": "Плавильная печь II",
+      "energy_cost": 8
+    },
+    {
+      "place_id": 1,
+      "name": "Улучшение Плавильной печи II",
+      "energy_cost": 50
+    },
+    {
+      "place_id": 1,
+      "name": "Плавильная печь III",
+      "energy_cost": 8
+    },
+    {
+      "place_id": 1,
+      "name": "Улучшение Плавильной печи III",
+      "energy_cost": 50
+    },
+    {
+      "place_id": 1,
+      "name": "Деревянная наковальня",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Наковальня",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Наковальня II",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Столярный верстак",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Столярный верстак II",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Винный пресс",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Козлы",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Дисковая пила",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Место для рубки",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Гончарный круг",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Бумажный пресс",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Стол ювелира",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Колодец",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Водяной насос",
+      "energy_cost": 0
+    },
+    {
+      "place_id": 1,
+      "name": "Фабрика товаров",
+      "energy_cost": 0
+    }
+  ]
+}
