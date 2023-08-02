@@ -1,22 +1,38 @@
 import { prisma } from '.';
 
-export const generate_test_data = () => {
+export const generate_test_data = async () => {
+  await places();
+  await points();
+  await categories();
+  await items();
+  await schemas();
+  await schemas_recipes();
+  await items_recipes();
+  await items_recipes_list();
+  return true;
+};
+
+const places = async () => {
   const place_data = [{ name: 'Двор' }, { name: 'Милый дом' }];
 
-  prisma.place.createMany({
+  return await prisma.place.createMany({
     data: place_data
   });
+};
 
+const points = async () => {
   const points_data = [
     { name: 'Зеленый' },
     { name: 'Красный' },
     { name: 'Синий' }
   ];
 
-  prisma.point.createMany({
+  return await prisma.point.createMany({
     data: points_data
   });
+};
 
+const categories = async () => {
   const category_data = [
     {
       //1
@@ -42,10 +58,12 @@ export const generate_test_data = () => {
     }
   ];
 
-  prisma.itemcategory.createMany({
+  return await prisma.ItemCategory.createMany({
     data: category_data
   });
+};
 
+const items = async () => {
   const items_data = [
     {
       //1
@@ -79,10 +97,12 @@ export const generate_test_data = () => {
     }
   ];
 
-  prisma.item.createMany({
+  return await prisma.item.createMany({
     data: items_data
   });
+};
 
+const schemas = async () => {
   const schemas_data = [
     {
       //1
@@ -92,10 +112,12 @@ export const generate_test_data = () => {
     }
   ];
 
-  prisma.schema.createMany({
+  return await prisma.schema.createMany({
     data: schemas_data
   });
+};
 
+const schemas_recipes = async () => {
   const schemas_recipes_data = [
     {
       //1
@@ -117,62 +139,64 @@ export const generate_test_data = () => {
     }
   ];
 
-  prisma.schemarecipe.createMany({
+  return await prisma.SchemaRecipe.createMany({
     data: schemas_recipes_data
   });
+};
 
+const items_recipes = async () => {
   const items_recipes_data = [
     {
       //1
       itemId: 2,
       stationId: 1,
-      energyCost: 10
+      energyCost: 10,
+      quantity: 6
     },
     {
       //2
       itemId: 3,
       stationId: 1,
-      energyCost: 5
+      energyCost: 5,
+      quantity: 8
     },
     {
       //3
       itemId: 5,
       stationId: 1,
-      energyCost: 4
+      energyCost: 4,
+      quantity: 4
     }
   ];
 
-  prisma.schemarecipe.createMany({
+  return await prisma.ItemRecipe.createMany({
     data: items_recipes_data
   });
+};
 
-  const itemes_recipes_list_data = [
+const items_recipes_list = async () => {
+  const items_recipes_list_data = [
     {
       //1
       recipeId: 1,
-      stationId: 1,
       costItemId: 1,
       quantity: 1
     },
     {
       //2
       recipeId: 2,
-      stationId: 1,
       costItemId: 4,
       quantity: 1
     },
     {
       //3
       recipeId: 3,
-      stationId: 1,
       costItemId: 4,
       quantity: 1
     }
   ];
 
-  prisma.itemrecipelist.createMany({
-    data: itemes_recipes_list_data
+  return await prisma.ItemRecipeList.createMany({
+    data: items_recipes_list_data
   });
-
-  return true;
 };
