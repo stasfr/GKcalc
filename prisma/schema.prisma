@@ -23,7 +23,7 @@ model Schema {
   placeId      Int
   place        Place          @relation(fields: [placeId], references: [id])
   SchemaRecipe SchemaRecipe[]
-  Station      Station[]
+  ItemRecipe   ItemRecipe[]
 }
 
 model ItemCategory {
@@ -85,17 +85,10 @@ model ItemRecipeList {
   quantity   Int
 }
 
-model Station {
-  id         Int          @id @default(autoincrement())
-  schemaId   Int
-  schema     Schema       @relation(fields: [schemaId], references: [id])
-  ItemRecipe ItemRecipe[]
-}
-
 model ItemRecipe {
   id             Int              @id @default(autoincrement())
-  stationId      Int
-  station        Station          @relation(fields: [stationId], references: [id])
+  schemaId       Int
+  schema         Schema           @relation(fields: [schemaId], references: [id])
   energyCost     Int
   ItemRecipeList ItemRecipeList[]
 }
