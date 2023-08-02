@@ -54,6 +54,7 @@ model SchemaRecipe {
   schema   Schema @relation(fields: [schemaId], references: [id])
   itemId   Int
   item     Item   @relation(fields: [itemId], references: [id])
+  quantity Int
 }
 
 model Point {
