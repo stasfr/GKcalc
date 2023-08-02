@@ -90,5 +90,6 @@ model ItemRecipe {
   schemaId       Int
   schema         Schema           @relation(fields: [schemaId], references: [id])
   energyCost     Int
+  quantity       Int
   ItemRecipeList ItemRecipeList[]
 }
