@@ -11,14 +11,17 @@ datasource db {
 }
 
 model Place {
-  id   Int    @id @default(autoincrement())
-  name String
+  id     Int      @id @default(autoincrement())
+  name   String
+  Schema Schema[]
 }
 
 model Schema {
   id           Int            @id @default(autoincrement())
   name         String
   energyCost   Int
+  placeId      Int
+  place        Place          @relation(fields: [placeId], references: [id])
   SchemaRecipe SchemaRecipe[]
   Station      Station[]
 }
