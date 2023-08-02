@@ -44,8 +44,8 @@ model Item {
   SchemaRecipe             SchemaRecipe[]
   ResearchRecipeItemRecipe ResearchRecipe[] @relation("ItemResearchRecipe")
   ResearchRecipeItemCost   ResearchRecipe[] @relation("ItemReseaarchCost")
-  ItemRecipeListItemRecipe ItemRecipeList[] @relation("ItemRecipe")
-  ItemRecipeListItemCost   ItemRecipeList[] @relation("ItemCost")
+  ItemRecipeList           ItemRecipeList[]
+  ItemRecipe               ItemRecipe[]
 }
 
 model SchemaRecipe {
@@ -76,17 +76,17 @@ model ResearchRecipe {
 
 model ItemRecipeList {
   id         Int        @id @default(autoincrement())
-  itemId     Int
-  item       Item       @relation("ItemRecipe", fields: [itemId], references: [id])
-  costItemId Int
-  costItem   Item       @relation("ItemCost", fields: [costItemId], references: [id])
   recipeId   Int
   recipe     ItemRecipe @relation(fields: [recipeId], references: [id])
+  costItemId Int
+  costItem   Item       @relation(fields: [costItemId], references: [id])
   quantity   Int
 }
 
 model ItemRecipe {
   id             Int              @id @default(autoincrement())
+  itemId         Int
+  item           Item             @relation(fields: [itemId], references: [id])
   schemaId       Int
   schema         Schema           @relation(fields: [schemaId], references: [id])
   energyCost     Int
