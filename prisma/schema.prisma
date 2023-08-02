@@ -87,8 +87,8 @@ model ItemRecipe {
   id             Int              @id @default(autoincrement())
   itemId         Int
   item           Item             @relation(fields: [itemId], references: [id])
-  schemaId       Int
-  schema         Schema           @relation(fields: [schemaId], references: [id])
+  stationId      Int
+  station        Schema           @relation(fields: [stationId], references: [id])
   energyCost     Int
   quantity       Int
   ItemRecipeList ItemRecipeList[]
