@@ -13,6 +13,7 @@ datasource db {
 model Place {
   id     Int      @id @default(autoincrement())
   name   String
+  img    String
   Schema Schema[]
 }
 
@@ -21,6 +22,7 @@ model Schema {
   name         String
   energyCost   Int
   placeId      Int
+  img          String
   place        Place          @relation(fields: [placeId], references: [id])
   SchemaRecipe SchemaRecipe[]
   ItemRecipe   ItemRecipe[]
@@ -41,6 +43,7 @@ model Item {
   category                 ItemCategory     @relation(fields: [itemCategoryId], references: [id])
   name                     String
   price                    Int
+  img                      String
   SchemaRecipe             SchemaRecipe[]
   ResearchRecipeItemRecipe ResearchRecipe[] @relation("ItemResearchRecipe")
   ResearchRecipeItemCost   ResearchRecipe[] @relation("ItemReseaarchCost")
@@ -60,6 +63,7 @@ model SchemaRecipe {
 model Point {
   id             Int              @id @default(autoincrement())
   name           String
+  img            String
   ResearchRecipe ResearchRecipe[]
 }
 
