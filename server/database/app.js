@@ -19,11 +19,3 @@ export const get_all_places_with_shemas = () => {
     }
   });
 };
-
-export const get_schemas_by_place = placeId => {
-  return prisma.schema.findUnique({
-    where: {
-      placeId
-    }
-  });
-};
