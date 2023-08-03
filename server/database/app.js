@@ -19,3 +19,15 @@ export const get_all_places_with_shemas = () => {
     }
   });
 };
+
+export const get_schema_recipe = schemaId => {
+  return prisma.SchemaRecipe.findMany({
+    where: {
+      schemaId
+    },
+    select: {
+      item: true,
+      quantity: true
+    }
+  });
+};
