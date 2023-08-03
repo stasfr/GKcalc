@@ -12,6 +12,14 @@ export const get_place_by_id = placeId => {
   });
 };
 
+export const get_all_places_with_shemas = () => {
+  return prisma.place.findMany({
+    include: {
+      Schema: true
+    }
+  });
+};
+
 export const get_schemas_by_place = placeId => {
   return prisma.schema.findUnique({
     where: {
