@@ -1,0 +1,320 @@
+[
+    {
+        "id": 1,
+        "name": "",
+        "name_eng": "Farming",
+        "parentCategoryId": null
+    },
+    {
+        "id": 2,
+        "name": "",
+        "name_eng": "Crops",
+        "parentCategoryId": 1
+    },
+    {
+        "id": 3,
+        "name": "",
+        "name_eng": "Seeds",
+        "parentCategoryId": 1
+    },
+    {
+        "id": 4,
+        "name": "",
+        "name_eng": "Sapling",
+        "parentCategoryId": 1
+    },
+    {
+        "id": 5,
+        "name": "",
+        "name_eng": "Fertilizer",
+        "parentCategoryId": 1
+    },
+    {
+        "id": 6,
+        "name": "",
+        "name_eng": "Wood",
+        "parentCategoryId": null
+    },
+    {
+        "id": 7,
+        "name": "",
+        "name_eng": "Stone",
+        "parentCategoryId": null
+    },
+    {
+        "id": 8,
+        "name": "",
+        "name_eng": "Metal",
+        "parentCategoryId": null
+    },
+    {
+        "id": 9,
+        "name": "",
+        "name_eng": "Smithing",
+        "parentCategoryId": 8
+    },
+    {
+        "id": 10,
+        "name": "",
+        "name_eng": "Jewelry",
+        "parentCategoryId": 8
+    },
+    {
+        "id": 11,
+        "name": "",
+        "name_eng": "Glass",
+        "parentCategoryId": null
+    },
+    {
+        "id": 12,
+        "name": "",
+        "name_eng": "Quest",
+        "parentCategoryId": null
+    },
+    {
+        "id": 13,
+        "name": "",
+        "name_eng": "Stranger Sins Quest",
+        "parentCategoryId": null
+    },
+    {
+        "id": 14,
+        "name": "",
+        "name_eng": "Game of Crone Quest",
+        "parentCategoryId": null
+    },
+    {
+        "id": 15,
+        "name": "",
+        "name_eng": "Better Save Soul Quest",
+        "parentCategoryId": null
+    },
+    {
+        "id": 16,
+        "name": "",
+        "name_eng": "Food",
+        "parentCategoryId": null
+    },
+    {
+        "id": 17,
+        "name": "",
+        "name_eng": "Resources",
+        "parentCategoryId": 16
+    },
+    {
+        "id": 18,
+        "name": "",
+        "name_eng": "Snacks",
+        "parentCategoryId": 16
+    },
+    {
+        "id": 19,
+        "name": "",
+        "name_eng": "Meals",
+        "parentCategoryId": 16
+    },
+    {
+        "id": 20,
+        "name": "",
+        "name_eng": "Desserts",
+        "parentCategoryId": 16
+    },
+    {
+        "id": 21,
+        "name": "",
+        "name_eng": "Drinks",
+        "parentCategoryId": 16
+    },
+    {
+        "id": 22,
+        "name": "",
+        "name_eng": "Equipment",
+        "parentCategoryId": null
+    },
+    {
+        "id": 23,
+        "name": "",
+        "name_eng": "Armor",
+        "parentCategoryId": 22
+    },
+    {
+        "id": 24,
+        "name": "",
+        "name_eng": "Weapons",
+        "parentCategoryId": 22
+    },
+    {
+        "id": 25,
+        "name": "",
+        "name_eng": "Tools",
+        "parentCategoryId": 22
+    },
+    {
+        "id": 26,
+        "name": "",
+        "name_eng": "Foraging",
+        "parentCategoryId": null
+    },
+    {
+        "id": 27,
+        "name": "",
+        "name_eng": "Plants",
+        "parentCategoryId": 26
+    },
+    {
+        "id": 28,
+        "name": "",
+        "name_eng": "Insects",
+        "parentCategoryId": 26
+    },
+    {
+        "id": 29,
+        "name": "",
+        "name_eng": "Other",
+        "parentCategoryId": 26
+    },
+    {
+        "id": 30,
+        "name": "",
+        "name_eng": "Fishing",
+        "parentCategoryId": null
+    },
+    {
+        "id": 31,
+        "name": "",
+        "name_eng": "Equipment",
+        "parentCategoryId": 30
+    },
+    {
+        "id": 32,
+        "name": "",
+        "name_eng": "Fish",
+        "parentCategoryId": 30
+    },
+    {
+        "id": 33,
+        "name": "",
+        "name_eng": "Mining",
+        "parentCategoryId": null
+    },
+    {
+        "id": 34,
+        "name": "",
+        "name_eng": "Primary",
+        "parentCategoryId": 33
+    },
+    {
+        "id": 35,
+        "name": "",
+        "name_eng": "Secondary",
+        "parentCategoryId": 33
+    },
+    {
+        "id": 36,
+        "name": "",
+        "name_eng": "Writing",
+        "parentCategoryId": null
+    },
+    {
+        "id": 37,
+        "name": "",
+        "name_eng": "Written Works",
+        "parentCategoryId": 36
+    },
+    {
+        "id": 38,
+        "name": "",
+        "name_eng": "Resources",
+        "parentCategoryId": 36
+    },
+    {
+        "id": 39,
+        "name": "",
+        "name_eng": "Church",
+        "parentCategoryId": null
+    },
+    {
+        "id": 40,
+        "name": "",
+        "name_eng": "Sermons",
+        "parentCategoryId": 39
+    },
+    {
+        "id": 41,
+        "name": "",
+        "name_eng": "Resources",
+        "parentCategoryId": 39
+    },
+    {
+        "id": 42,
+        "name": "",
+        "name_eng": "Graves",
+        "parentCategoryId": null
+    },
+    {
+        "id": 43,
+        "name": "",
+        "name_eng": "Grave Markers",
+        "parentCategoryId": 42
+    },
+    {
+        "id": 44,
+        "name": "",
+        "name_eng": "Grave Fences",
+        "parentCategoryId": 42
+    },
+    {
+        "id": 45,
+        "name": "",
+        "name_eng": "Bodyparts",
+        "parentCategoryId": null
+    },
+    {
+        "id": 46,
+        "name": "",
+        "name_eng": "Mob Drops",
+        "parentCategoryId": null
+    },
+    {
+        "id": 47,
+        "name": "",
+        "name_eng": "Alchemy",
+        "parentCategoryId": null
+    },
+    {
+        "id": 48,
+        "name": "",
+        "name_eng": "Basic resources",
+        "parentCategoryId": 47
+    },
+    {
+        "id": 49,
+        "name": "",
+        "name_eng": "Alternative resources",
+        "parentCategoryId": 47
+    },
+    {
+        "id": 50,
+        "name": "",
+        "name_eng": "Products",
+        "parentCategoryId": 47
+    },
+    {
+        "id": 51,
+        "name": "",
+        "name_eng": "Embalming Injections",
+        "parentCategoryId": 47
+    },
+    {
+        "id": 52,
+        "name": "",
+        "name_eng": "Food Recipes",
+        "parentCategoryId": null
+    },
+    {
+        "id": 53,
+        "name": "",
+        "name_eng": "Miscellaneous",
+        "parentCategoryId": null
+    }
+]
