@@ -1,4 +1,5 @@
 import { prisma } from '.';
+import fs from 'fs';
 
 export const generate_test_data = async () => {
   await places();
@@ -13,7 +14,18 @@ export const generate_test_data = async () => {
 };
 
 const places = async () => {
-  const place_data = [{ name: 'Двор' }, { name: 'Милый дом' }];
+  const place_data = [];
+
+  let rawdata = fs.readFileSync('db_data/places.json');
+  let JSONdata = JSON.parse(rawdata);
+
+  JSONdata.forEach(element => {
+    place_data.push({
+      name: element.name,
+      name_eng: element.name_eng,
+      img: element.img
+    });
+  });
 
   return await prisma.place.createMany({
     data: place_data
@@ -22,9 +34,9 @@ const places = async () => {
 
 const points = async () => {
   const points_data = [
-    { name: 'Зеленый' },
-    { name: 'Красный' },
-    { name: 'Синий' }
+    { name: 'Зеленый', img: '' },
+    { name: 'Красный', img: '' },
+    { name: 'Синий', img: '' }
   ];
 
   return await prisma.point.createMany({
@@ -33,30 +45,18 @@ const points = async () => {
 };
 
 const categories = async () => {
-  const category_data = [
-    {
-      //1
-      name: 'Дерево'
-    },
-    {
-      //2
-      name: 'Камень'
-    },
-    {
-      //3
-      name: 'Металл'
-    },
-    {
-      //4
-      name: 'Железные и стальные изделия',
-      parentCategoryId: 3
-    },
-    {
-      //5
-      name: 'Ювелирные изделия',
-      parentCategoryId: 3
-    }
-  ];
+  const category_data = [];
+
+  let rawdata = fs.readFileSync('db_data/categories.json');
+  let JSONdata = JSON.parse(rawdata);
+
+  JSONdata.forEach(element => {
+    category_data.push({
+      name: element.name,
+      name_eng: element.name_eng,
+      parentCategoryId: element.parentCategoryId
+    });
+  });
 
   return await prisma.ItemCategory.createMany({
     data: category_data
@@ -64,38 +64,22 @@ const categories = async () => {
 };
 
 const items = async () => {
-  const items_data = [
-    {
-      //1
-      name: 'Бревно',
-      itemCategoryId: 1,
+  const items_data = [];
+
+  let rawdata = fs.readFileSync('db_data/items.json');
+  let JSONdata = JSON.parse(rawdata);
+
+  JSONdata.forEach(element => {
+    items_data.push({
+      name: element.name,
+      name_eng: element.name_eng,
+      wiki_href_eng: element.wiki_href_eng,
+      wiki_href: '',
+      itemCategoryId: element.itemCategoryId,
+      img: element.img,
       price: 0
-    },
-    {
-      //2
-      name: 'Доска',
-      itemCategoryId: 1,
-      price: 5
-    },
-    {
-      //3
-      name: 'Гвозди',
-      itemCategoryId: 4,
-      price: 27
-    },
-    {
-      //4
-      name: 'Железный слиток',
-      itemCategoryId: 4,
-      price: 80
-    },
-    {
-      //5
-      name: 'Простые железные детали',
-      itemCategoryId: 4,
-      price: 60
-    }
-  ];
+    });
+  });
 
   return await prisma.item.createMany({
     data: items_data
@@ -103,14 +87,22 @@ const items = async () => {
 };
 
 const schemas = async () => {
-  const schemas_data = [
-    {
-      //1
-      name: 'Ящик',
-      placeId: 1,
-      energyCost: 7
-    }
-  ];
+  const schemas_data = [];
+
+  let rawdata = fs.readFileSync('db_data/schemas.json');
+  let JSONdata = JSON.parse(rawdata);
+
+  JSONdata.forEach(element => {
+    schemas_data.push({
+      name: element.name,
+      name_eng: element.name_eng,
+      wiki_href_eng: element.wiki_href_eng,
+      wiki_href: element.wiki_href,
+      placeId: element.placeId,
+      img: element.img,
+      energyCost: 0
+    });
+  });
 
   return await prisma.schema.createMany({
     data: schemas_data
