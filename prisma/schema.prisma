@@ -11,26 +11,31 @@ datasource db {
 }
 
 model Place {
-  id     Int      @id @default(autoincrement())
-  name   String
-  img    String
-  Schema Schema[]
+  id       Int      @id @default(autoincrement())
+  name     String
+  name_eng String
+  img      String
+  Schema   Schema[]
 }
 
 model Schema {
-  id           Int            @id @default(autoincrement())
-  name         String
-  energyCost   Int
-  placeId      Int
-  img          String
-  place        Place          @relation(fields: [placeId], references: [id])
-  SchemaRecipe SchemaRecipe[]
-  ItemRecipe   ItemRecipe[]
+  id            Int            @id @default(autoincrement())
+  name          String
+  name_eng      String
+  wiki_href     String
+  wiki_href_eng String
+  energyCost    Int
+  placeId       Int
+  img           String
+  place         Place          @relation(fields: [placeId], references: [id])
+  SchemaRecipe  SchemaRecipe[]
+  ItemRecipe    ItemRecipe[]
 }
 
 model ItemCategory {
   id               Int            @id @default(autoincrement())
   name             String
+  name_eng         String
   parentCategoryId Int?
   parentCategory   ItemCategory?  @relation("CategoriesStructure", fields: [parentCategoryId], references: [id])
   subCategories    ItemCategory[] @relation("CategoriesStructure")
@@ -42,6 +47,9 @@ model Item {
   itemCategoryId           Int
   category                 ItemCategory     @relation(fields: [itemCategoryId], references: [id])
   name                     String
+  name_eng                 String
+  wiki_href                String
+  wiki_href_eng            String
   price                    Int
   img                      String
   SchemaRecipe             SchemaRecipe[]
