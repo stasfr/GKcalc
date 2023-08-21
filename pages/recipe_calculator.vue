@@ -1,5 +1,5 @@
 <template>
-  <calculator />
+  <RecipeCalculator />
 </template>
 
 <script setup></script>
