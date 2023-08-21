@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full">
-    <div class="w-[50%] bg-primary">{{ store.recipes_list }}</div>
+    <div class="w-[50%] bg-primary"><RecipeCalculatorRecipeList /></div>
     <div class="w-2 bg-accent"></div>
     <div class="w-[50%] bg-primary">recipe</div>
   </div>
