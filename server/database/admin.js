@@ -20,6 +20,7 @@ const places = async () => {
   let JSONdata = JSON.parse(rawdata);
 
   JSONdata.forEach(element => {
+    console.log(element.name_eng);
     place_data.push({
       name: element.name,
       name_eng: element.name_eng,
@@ -51,6 +52,7 @@ const categories = async () => {
   let JSONdata = JSON.parse(rawdata);
 
   JSONdata.forEach(element => {
+    console.log(element.name_eng);
     category_data.push({
       name: element.name,
       name_eng: element.name_eng,
@@ -70,10 +72,11 @@ const items = async () => {
   let JSONdata = JSON.parse(rawdata);
 
   JSONdata.forEach(element => {
+    console.log(element.name_eng);
     items_data.push({
       name: element.name,
       name_eng: element.name_eng,
-      wiki_href_eng: element.wiki_href_eng,
+      wiki_href_eng: '',
       wiki_href: '',
       itemCategoryId: element.itemCategoryId,
       img: element.img,
@@ -93,6 +96,7 @@ const schemas = async () => {
   let JSONdata = JSON.parse(rawdata);
 
   JSONdata.forEach(element => {
+    console.log(element.name_eng);
     schemas_data.push({
       name: element.name,
       name_eng: element.name_eng,
